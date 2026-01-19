@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.img1
+{
+    height: 70px;
+    width: 70px;
+    margin-right: 150px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 2px;
+    border-bottom: 2px solid #ddd;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.main-button {
+    width: 120px;
+    height: 50px;
+    font-size: 15px;
+    margin-top: 10px;
+    /* padding: 10px; */
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: #45a049;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px); 
+}
+
+.ChessBoard {
+    flex: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /* border-right: 2px solid #ddd; */
+}
+
+.game-notations {
+    margin-right: 25px;
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-notations h2 {
+    margin-top: 0;
+}
+
+.game-notations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option-button {
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    font-family: "Arial", sans-serif;
+}
+
+.white {
+    background-color: #f0d9b5;
+}
+
+.black {
+    background-color: #b58863;
+}
+
+.ChessBoard-alpha {
+    width: 30px;
+    height: 40px;
+    border: 3px solid black;
+    font-size: 25px;
+}
+
+
+.Playy {
+    padding: 10px;
+    font-size: 20px;
+    height: 90px;
+    width: 200px;
+    color: black;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.play-button:hover .Playy,
+.Playy:hover {
+    display: block;
+}
+
+.play-button {
+    position: relative;
+    cursor: pointer;
+}
+
+.Button-Play{
+    margin: 4px;
+    border: 3px dotted black;
+    border-radius: 10px;
+}
+
+.game-notations h5 {
+    height: 200px; /* Adjust height as needed */
+    overflow-y: auto;
+    margin: 10px 0;
+}
+
+.NotationOfGame {
+    font-size: 25px;
+    height: 300px; /* Allow enough space for around 7 lines */
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 3px solid #000000;
+    width: 250px;
+    text-align: center;
+}
+
+.NotationTable {
+    border: 3px solid #000000;
+    width: 100%; /* Ensure it spans the container */
+}
+
+.NotationColumn {
+    height: 45px;
+    font-size: 18px;
+    border: 3px solid #000000;
+    text-align: center; /* Horizontally center the text */
+    vertical-align: middle; /* Vertically center the text */
+}
+
+.NotationHead{
+    font-size: 25px;
+}
+
+.color-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.color-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.color-button:hover {
+    background-color: #0056b3;
+}

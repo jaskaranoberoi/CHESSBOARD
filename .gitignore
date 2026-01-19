@@ -1,0 +1,25 @@
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# ML / CV
+Models/
+runs/
+yolov5/
+*.pt
+*.onnx
+
+# Executables
+*.exe
+
+# Media
+*.mp4
+*.pptx
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db

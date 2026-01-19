@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movable Chessboard</title>
+    <link rel="stylesheet" href="CSS/PlayOnline.css">
+</head>
+<body>
+    <div class="header">
+        <div class="button-container">
+            <img src="/Images/Logo.jpg" class="img1" alt="Logo">
+            <button class="main-button" onclick="LoadPlayVsComputer('/')">Homepage</button>
+            <button class="main-button">How to Play</button>
+            <button class="main-button play-button">
+                Play
+                <div class="Playy">
+                    <div class="Button-Play" onclick="LoadPlayVsComputer('/play')">Play vs Computer</div>
+                    <div class="Button-Play" onclick="LoadPlayVsComputer('/PlayOnline')">Play vs Human</div>
+                    <div class="Button-Play" onclick="LoadPlayVsComputer('/PlayOnline')">Play vs Friend</div>
+                </div>
+            </button>
+            <button class="main-button" onclick="LoadPlayVsComputer('/login')">Login</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="ChessBoard">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="ChessBoard-alpha"></td>
+                        <td class="ChessBoard-alpha">a</td>
+                        <td class="ChessBoard-alpha">b</td>
+                        <td class="ChessBoard-alpha">c</td>
+                        <td class="ChessBoard-alpha">d</td>
+                        <td class="ChessBoard-alpha">e</td>
+                        <td class="ChessBoard-alpha">f</td>
+                        <td class="ChessBoard-alpha">g</td>
+                        <td class="ChessBoard-alpha">h</td>
+                    </tr>
+                    <!-- 8th Row (Black pieces) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">8</td>
+                        <td class="black chess-square" id="a8">
+                            <div class="chess-piece" draggable="true">♜</div>
+                        </td>
+                        <td class="white chess-square" id="b8">
+                            <div class="chess-piece" draggable="true">♞</div>
+                        </td>
+                        <td class="black chess-square" id="c8">
+                            <div class="chess-piece" draggable="true">♝</div>
+                        </td>
+                        <td class="white chess-square" id="d8">
+                            <div class="chess-piece" draggable="true">♛</div>
+                        </td>
+                        <td class="black chess-square" id="e8">
+                            <div class="chess-piece" draggable="true">♚</div>
+                        </td>
+                        <td class="white chess-square" id="f8">
+                            <div class="chess-piece" draggable="true">♝</div>
+                        </td>
+                        <td class="black chess-square" id="g8">
+                            <div class="chess-piece" draggable="true">♞</div>
+                        </td>
+                        <td class="white chess-square" id="h8">
+                            <div class="chess-piece" draggable="true">♜</div>
+                        </td>
+                    </tr>
+                    <!-- 7th Row (Black pawns) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">7</td>
+                        <td class="white chess-square" id="a7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                        <td class="black chess-square" id="b7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                        <td class="white chess-square" id="c7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                        <td class="black chess-square" id="d7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                        <td class="white chess-square" id="e7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                        <td class="black chess-square" id="f7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                        <td class="white chess-square" id="g7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                        <td class="black chess-square" id="h7">
+                            <div class="chess-piece" draggable="true">♟</div>
+                        </td>
+                    </tr>
+                    <!-- 6th Row (Empty squares) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">6</td>
+                        <td class="black chess-square" id="a6"></td>
+                        <td class="white chess-square" id="b6"></td>
+                        <td class="black chess-square" id="c6"></td>
+                        <td class="white chess-square" id="d6"></td>
+                        <td class="black chess-square" id="e6"></td>
+                        <td class="white chess-square" id="f6"></td>
+                        <td class="black chess-square" id="g6"></td>
+                        <td class="white chess-square" id="h6"></td>
+                    </tr>
+                    <!-- 5th Row (Empty squares) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">5</td>
+                        <td class="white chess-square" id="a5"></td>
+                        <td class="black chess-square" id="b5"></td>
+                        <td class="white chess-square" id="c5"></td>
+                        <td class="black chess-square" id="d5"></td>
+                        <td class="white chess-square" id="e5"></td>
+                        <td class="black chess-square" id="f5"></td>
+                        <td class="white chess-square" id="g5"></td>
+                        <td class="black chess-square" id="h5"></td>
+                    </tr>
+                    <!-- 4th Row (Empty squares) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">4</td>
+                        <td class="black chess-square" id="a4"></td>
+                        <td class="white chess-square" id="b4"></td>
+                        <td class="black chess-square" id="c4"></td>
+                        <td class="white chess-square" id="d4"></td>
+                        <td class="black chess-square" id="e4"></td>
+                        <td class="white chess-square" id="f4"></td>
+                        <td class="black chess-square" id="g4"></td>
+                        <td class="white chess-square" id="h4"></td>
+                    </tr>
+                    <!-- 3rd Row (Empty squares) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">3</td>
+                        <td class="white chess-square" id="a3"></td>
+                        <td class="black chess-square" id="b3"></td>
+                        <td class="white chess-square" id="c3"></td>
+                        <td class="black chess-square" id="d3"></td>
+                        <td class="white chess-square" id="e3"></td>
+                        <td class="black chess-square" id="f3"></td>
+                        <td class="white chess-square" id="g3"></td>
+                        <td class="black chess-square" id="h3"></td>
+                    </tr>
+                    <!-- 2nd Row (White pawns) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">2</td>
+                        <td class="black chess-square" id="a2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                        <td class="white chess-square" id="b2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                        <td class="black chess-square" id="c2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                        <td class="white chess-square" id="d2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                        <td class="black chess-square" id="e2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                        <td class="white chess-square" id="f2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                        <td class="black chess-square" id="g2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                        <td class="white chess-square" id="h2">
+                            <div class="chess-piece" draggable="true">♙</div>
+                        </td>
+                    </tr>
+                    <!-- 1st Row (White pieces) -->
+                    <tr>
+                        <td class="ChessBoard-alpha">1</td>
+                        <td class="white chess-square" id="a1">
+                            <div class="chess-piece" draggable="true">♖</div>
+                        </td>
+                        <td class="black chess-square" id="b1">
+                            <div class="chess-piece" draggable="true">♘</div>
+                        </td>
+                        <td class="white chess-square" id="c1">
+                            <div class="chess-piece" draggable="true">♗</div>
+                        </td>
+                        <td class="black chess-square" id="d1">
+                            <div class="chess-piece" draggable="true">♕</div>
+                        </td>
+                        <td class="white chess-square" id="e1">
+                            <div class="chess-piece" draggable="true">♔</div>
+                        </td>
+                        <td class="black chess-square" id="f1">
+                            <div class="chess-piece" draggable="true">♗</div>
+                        </td>
+                        <td class="white chess-square" id="g1">
+                            <div class="chess-piece" draggable="true">♘</div>
+                        </td>
+                        <td class="black chess-square" id="h1">
+                            <div class="chess-piece" draggable="true">♖</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="buttonContainer">
+        <button class="main-button" id="createGameButton">Create a Game</button>
+        <button class="main-button" id="joinGameButton">Join a Game</button>
+        
+        <div id="colorSelectionContainer" style="display: none;">
+            <button class="main-button" id="whiteButton">Play as White</button>
+            <button class="main-button" id="blackButton">Play as Black</button>
+        </div>
+        
+        <div id="gameCodeContainer" style="display: none;">
+            <span id="gameCodeText"></span>
+            <input type="text" id="gameCodeInput" placeholder="Enter Game Code">
+            <button class="main-button" id="submitGameCodeButton">Submit Game Code</button>
+        </div>
+    </div>
+    <script src="JavaScript/PlayOnline.js"></script>
+
+    <script>
+        function logintoplay()
+        {
+            alert("Login to Play");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess - How to Play</title>
+    <link rel="stylesheet" href="/CSS/How-To-Play.css">
+    <script src="/JavaScript/Homepage.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="button-container">
+            <img src="/Images/Logo.jpg" class="img1">
+            <button class="main-button" onclick="LoadPlayVsComputer('/')">Homepage</button>
+            <button class="main-button">How to Play</button>
+            <button class="main-button play-button">
+                Play
+                <div class="Playy">
+                    <div class="Button-Play" onclick="LoadPlayVsComputer('/play')">Play vs Computer</div>
+                    <div class="Button-Play" onclick="LoadPlayVsComputer('/PlayOnline')">Play vs Human</div>
+                    <div class="Button-Play">Play vs Friend</div>
+                </div>
+            </button>
+            <button class="main-button" onclick="LoadPlayVsComputer('/login')">Login</button>
+        </div>
+    </div>
+
+    <div class="how-to-play-section">
+        <h1>How to Play Chess</h1>
+        <ol>
+            <li><strong>Setup:</strong> The game is played on an 8x8 board with alternating colors of squares. Each player starts with 16 pieces: 8 pawns, 2 rooks, 2 knights, 2 bishops, 1 queen, and 1 king.</li>
+            <li><strong>Objective:</strong> The objective of chess is to checkmate your opponent's king, meaning their king is in a position where it can be captured and no legal moves can avoid this.</li>
+            <li><strong>Basic Moves:</strong>
+                <ul>
+                    <li><strong>Pawns:</strong> Move forward one square (or two squares on their first move). Pawns capture diagonally.</li>
+                    <li><strong>Rooks:</strong> Move any number of squares vertically or horizontally.</li>
+                    <li><strong>Knights:</strong> Move in an "L" shape: two squares in one direction and then one square perpendicular.</li>
+                    <li><strong>Bishops:</strong> Move diagonally across the board.</li>
+                    <li><strong>Queens:</strong> Move any number of squares vertically, horizontally, or diagonally.</li>
+                    <li><strong>Kings:</strong> Move one square in any direction.</li>
+                </ul>
+            </li>
+            <li><strong>Special Moves:</strong>
+                <ul>
+                    <li><strong>Castling:</strong> The king and one of the rooks move simultaneously, provided neither piece has moved before and there are no pieces between them.</li>
+                    <li><strong>En Passant:</strong> A special pawn capture that can occur immediately after an opponent moves their pawn two squares forward.</li>
+                    <li><strong>Promotion:</strong> When a pawn reaches the far end of the board, it is promoted to any piece except a king (usually a queen).</li>
+                </ul>
+            </li>
+            <li><strong>Endgame:</strong> The game ends when one player checkmates the other player's king. A game can also end in a draw under certain conditions.</li>
+        </ol>
+    </div>
+</body>
+</html>

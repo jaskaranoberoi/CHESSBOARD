@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/CSS/loginpage.css"> <!-- Assuming same CSS for styling -->
+</head>
+<body>
+    <div class="header">
+        <div class="button-container">
+            <img src="/Images/Logo.jpg" class="img1">
+            <button class="main-button">Homepage</button>
+            <button class="main-button">How to Play</button>
+            <button class="main-button play-button">
+                Play
+                <div class="Playy">
+                    <div class="Button-Play">Play vs Computer</div>
+                    <div class="Button-Play">Play vs Human</div>
+                    <div class="Button-Play">Play vs Friend</div>
+                </div>
+            </button>
+            <button class="main-button">
+                <a href="login.html" class="login-link">Login</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="login-box">
+            <h2>Sign Up</h2>
+            <form action="/signup" method="POST">
+                <div class="input-container">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="phone_number">Phone Number</label>
+                    <input type="text" id="phone_number" name="phone_number">
+                </div>
+                <button type="submit" class="main-button">Sign Up</button>
+            </form>
+            <div class="signup-container">
+                <p>Already a user? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
